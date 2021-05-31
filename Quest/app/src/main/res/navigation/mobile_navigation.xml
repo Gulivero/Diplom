@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_myQuests">
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="slavin.fit.bstu.quest.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_myQuests"
+        android:name="slavin.fit.bstu.quest.ui.myQuests.myQuestsFragment"
+        android:label="Созданные квесты"
+        tools:layout="@layout/fragment_myquests" />
+
+    <fragment
+        android:id="@+id/nav_acceptQuests"
+        android:name="slavin.fit.bstu.quest.ui.acceptQuests.acceptQuestsFragment"
+        android:label="Принятые квесты"
+        tools:layout="@layout/fragment_acceptquests" />
+
+    <fragment
+        android:id="@+id/nav_allQuests"
+        android:name="slavin.fit.bstu.quest.ui.allQuests.allQuestsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_allquests">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_allUsers"
+        android:name="slavin.fit.bstu.quest.ui.allUsers.allUsersFragment"
+        android:label="Рейтинг"
+        tools:layout="@layout/fragment_allusers">
+    </fragment>
+</navigation>

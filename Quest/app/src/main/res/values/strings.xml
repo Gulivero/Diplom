@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Квест</string>
+    <string name="title_activity_login">Вход в аккаунт</string>
+    <string name="title_activity_home">Домашняя страница</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Квест</string>
+    <string name="nav_header_subtitle">Приложение для упрощения жизни</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_add">Новый квест</string>
+
+    <string name="menu_allQuests">Все квесты</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_allUsers">Рейтинг пользователей</string>
+    <string name="menu_myQuests">Созданные квесты</string>
+    <string name="menu_exit">Выйти из аккаунта</string>
+    <string name="type_name_hire">Введите имя здесь</string>
+    <string name="type_name_here1">Введите имя здесь</string>
+    <string name="search1">Поиск</string>
+    <string name="footer">© Slavin Ltd., 2021</string>
+</resources>

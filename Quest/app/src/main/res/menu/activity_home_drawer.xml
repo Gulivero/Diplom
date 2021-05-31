@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/menu_profile"
+            android:icon="@drawable/icon_profile"/>
+        <item
+            android:id="@+id/nav_allQuests"
+            android:title="@string/menu_allQuests"
+            android:icon="@drawable/icon_allquest"/>
+        <item
+            android:id="@+id/nav_myQuests"
+            android:title="@string/menu_myQuests"
+            android:icon="@drawable/icon_myquest"/>
+        <item
+            android:id="@+id/nav_acceptQuests"
+            android:title="Принятые квесты"
+            android:icon="@drawable/icon_acceptquest"/>
+        <item
+            android:id="@+id/nav_allUsers"
+            android:title="@string/menu_allUsers"
+            android:icon="@drawable/icon_rating"/>
+        <item
+            android:id="@+id/nav_exit"
+            android:title="@string/menu_exit"
+            android:icon="@drawable/icon_exit"/>
+
+    </group>
+</menu>

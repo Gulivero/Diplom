@@ -1,0 +1,151 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardView:cardCornerRadius="10dp"
+    cardView:cardElevation="10dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/layout123"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageProfile2"
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            cardView:cardCornerRadius="10dp"
+            cardView:cardElevation="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="135dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                cardView:cardCornerRadius="10dp"
+                cardView:cardElevation="10dp">
+
+                <ImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="135dp"
+                    android:layout_height="125dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plus" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_androidName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/layout122"
+            android:layout_toEndOf="@+id/imageProfile2"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_androidDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_androidName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/layout122"
+            android:layout_toEndOf="@+id/imageProfile2"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_androidCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_androidDescription"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="7dp"
+            android:layout_toEndOf="@+id/imageProfile2"
+            android:background="@drawable/edit_text_style2"
+            android:fontFamily="@font/inter_bold"
+            android:padding="7sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorGray2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_androidCountText"
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_androidCount"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="0sp"
+            android:layout_toEndOf="@+id/tv_androidCount"
+            android:fontFamily="@font/inter_light"
+            android:text="Квестов выполнено"
+            android:textColor="@color/colorGray"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout122"
+            android:layout_width="50sp"
+            android:layout_height="130sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorGrayWhite2"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp">
+
+            <RelativeLayout
+                android:layout_width="1sp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack2"/>
+
+            <ImageView
+                android:id="@+id/imageKrestik"
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_below="@+id/imageGalochka"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/imageGalochka"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no"
+                app:tint="@color/colorRed" />
+
+            <ImageView
+                android:id="@+id/imageGalochka"
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/yes"
+                app:tint="@color/colorGreen" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

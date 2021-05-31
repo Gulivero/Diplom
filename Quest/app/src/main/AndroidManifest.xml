@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="slavin.fit.bstu.quest">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/icon_app6"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SetContractorActivity"
+            android:label="Исполнители"/>
+        <activity
+            android:name=".EditQuestActivity"
+            android:label="Изменение квеста" />
+        <activity
+            android:name=".CurrentQuestActivity"
+            android:label="Выбранный квест" />
+        <activity
+            android:name=".AddQuestActivity"
+            android:label="Создание квеста" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Создание аккаунта" />
+        <activity
+            android:name=".CurrentUserActivity"
+            android:label="Профиль пользователя" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Квест">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

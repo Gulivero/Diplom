@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "138691382695",
+    "project_id": "quest-703c1",
+    "storage_bucket": "quest-703c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138691382695:android:51ca0ee2c32f61e6203a82",
+        "android_client_info": {
+          "package_name": "slavin.fit.bstu.quest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138691382695-52nu5ac4b7rkg2h9l3nna7poc1a57f2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDStpFVpCuOP-7yY7cuZGOAGZW6eKy2SGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138691382695-52nu5ac4b7rkg2h9l3nna7poc1a57f2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
