@@ -2,9 +2,11 @@ package slavin.fit.bstu.quest.ui.acceptQuests;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import slavin.fit.bstu.quest.API.NetworkService;
+import slavin.fit.bstu.quest.Adapter.DataAdapterComplete2;
 import slavin.fit.bstu.quest.CurrentQuestActivity;
 import slavin.fit.bstu.quest.Adapter.DataAdapter;
 import slavin.fit.bstu.quest.Adapter.DataAdapterComplete;
@@ -33,7 +36,8 @@ public class acceptQuestsFragment extends Fragment {
     AdapterView.AdapterContextMenuInfo info;
     String username;
     int userid;
-    DataAdapterComplete adapter, adapter2;
+    DataAdapterComplete adapter;
+    DataAdapterComplete2 adapter2;
     List<Quest> listQuests = new ArrayList<>();
     List<Quest> listQuestsComplete = new ArrayList<>();
     List<Image> listImages = new ArrayList<>();
@@ -44,7 +48,8 @@ public class acceptQuestsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
+        getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
         root = inflater.inflate(R.layout.fragment_acceptquests, container, false);
 
         recyclerView = (RecyclerView) root.findViewById(R.id.card_recycler_view);
@@ -133,24 +138,26 @@ public class acceptQuestsFragment extends Fragment {
         recyclerView2.setNestedScrollingEnabled(false);
 
         adapter = new DataAdapterComplete(root.getContext(), listQuests, listImages);
-        adapter2 = new DataAdapterComplete(root.getContext(), listQuestsComplete, listImagesComplete);
+        adapter2 = new DataAdapterComplete2(root.getContext(), listQuestsComplete, listImagesComplete);
         adapter.setOnItemClickListener(new DataAdapterComplete.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {
                 Quest quest = listQuests.get(position);
                 Intent intent = new Intent(root.getContext(), CurrentQuestActivity.class);
                 intent.putExtra("id", quest.getId());
+                Log.d("valera", "" + quest.getId());
                 intent.putExtra("username", username);
                 intent.putExtra("userId", userid);
                 startActivity(intent);
             }
         });
-        adapter2.setOnItemClickListener(new DataAdapterComplete.ClickListener() {
+        adapter2.setOnItemClickListener(new DataAdapterComplete2.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {
                 Quest quest = listQuestsComplete.get(position);
                 Intent intent = new Intent(root.getContext(), CurrentQuestActivity.class);
                 intent.putExtra("id", quest.getId());
+                Log.d("valera", "" + quest.getId());
                 intent.putExtra("username", username);
                 intent.putExtra("userId", userid);
                 startActivity(intent);
@@ -158,6 +165,12 @@ public class acceptQuestsFragment extends Fragment {
         });
         recyclerView.setAdapter(adapter);
         recyclerView2.setAdapter(adapter2);
+        for (Quest quest:listQuests) {
+            Log.d("valera", quest.getName() + " " + quest.getId());
+        }
+        for (Quest quest:listQuestsComplete) {
+            Log.d("valera2", quest.getName() + " " + quest.getId());
+        }
 
     }
 }

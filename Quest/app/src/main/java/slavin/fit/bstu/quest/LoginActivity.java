@@ -40,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
 
 
         init();
@@ -98,19 +100,24 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
                         User loginUser = response.body();
-                        Integer id = loginUser.getId();
-                        String username = loginUser.getLogin();
-                        Toast.makeText(LoginActivity.this, "Авторизация прошла успешно", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        intent.putExtra("id", id);
-                        intent.putExtra("username", username);
-                        startActivity(intent);
+                        if (loginUser.getLogin() != null) {
+                            Integer id = loginUser.getId();
+                            String username = loginUser.getLogin();
+                            Toast.makeText(LoginActivity.this, "Авторизация прошла успешно", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                            intent.putExtra("id", id);
+                            intent.putExtra("username", username);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Неверное имя пользователя или пароль", Toast.LENGTH_LONG).show();
+                        }
                     }
 
                     @Override
                     public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-                        Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Неверное имя пользователя или пароль", Toast.LENGTH_LONG).show();
                         t.printStackTrace();
                     }
                 });

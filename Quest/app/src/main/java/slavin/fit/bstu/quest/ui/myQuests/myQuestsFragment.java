@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
@@ -56,6 +57,8 @@ public class myQuestsFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         root = inflater.inflate(R.layout.fragment_myquests, container, false);
+        getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
 
         recyclerView = (RecyclerView) root.findViewById(R.id.card_recycler_view);
         recyclerView2 = (RecyclerView) root.findViewById(R.id.card_recycler_view2);

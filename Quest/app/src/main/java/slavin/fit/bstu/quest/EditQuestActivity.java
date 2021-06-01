@@ -16,6 +16,7 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,6 +73,8 @@ public class EditQuestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editquest);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
 
         flag = false;
 
@@ -199,6 +202,11 @@ public class EditQuestActivity extends AppCompatActivity {
                         Toast.makeText(EditQuestActivity.this, response.body(), Toast.LENGTH_LONG).show();
                         if (response.body().equals("Квест успешно изменён")) {
                             uploadImage();
+                            try {
+                                Thread.sleep(2000); //Приостанавливает поток на 1 секунду
+                            } catch (Exception e) {
+
+                            }
                             back();
                         }
                     }
