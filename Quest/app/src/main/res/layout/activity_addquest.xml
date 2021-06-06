@@ -47,27 +47,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="82sp"
+        android:layout_marginBottom="5dp"
         android:layout_weight="1"
         android:text="Название"
-        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageQuest2"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/imageQuest2" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginBottom="19dp"
         android:background="@drawable/edit_text_style"
-        android:maxLength="20"
+        android:maxLength="30"
         android:padding="10sp"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageQuest2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/imageQuest2" />
 
     <TextView
         android:id="@+id/textView4"

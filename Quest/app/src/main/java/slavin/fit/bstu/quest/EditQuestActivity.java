@@ -203,7 +203,7 @@ public class EditQuestActivity extends AppCompatActivity {
                         if (response.body().equals("Квест успешно изменён")) {
                             uploadImage();
                             try {
-                                Thread.sleep(2000); //Приостанавливает поток на 1 секунду
+                                Thread.sleep(3000); //Приостанавливает поток на 1 секунду
                             } catch (Exception e) {
 
                             }

@@ -89,7 +89,8 @@ public class allQuestsFragment extends Fragment {
     void filter(String text){
         List<Quest> temp = new ArrayList();
         for(Quest quest: listQuests){
-            if(quest.getName().toLowerCase().contains(text.toLowerCase()) || quest.getDescription().toLowerCase().contains(text.toLowerCase())){
+            if(quest.getName().toLowerCase().contains(text.toLowerCase()) ||
+                    quest.getDescription().toLowerCase().contains(text.toLowerCase())){
                 temp.add(quest);
             }
         }

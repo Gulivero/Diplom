@@ -159,7 +159,7 @@ public class AddQuestActivity extends AppCompatActivity {
                                             }
                                             uploadImage();
                                             try {
-                                                Thread.sleep(2000); //Приостанавливает поток на 1 секунду
+                                                Thread.sleep(3000); //Приостанавливает поток на 1 секунду
                                             } catch (Exception e) {
 
                                             }

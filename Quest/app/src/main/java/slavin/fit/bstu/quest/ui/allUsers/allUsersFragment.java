@@ -86,8 +86,14 @@ public class allUsersFragment extends Fragment {
 
         setHasOptionsMenu(true);
 
-        display();
+        displayfirst();
+        desc();
         return root;
+    }
+
+    public void displayfirst() {
+        display();
+        desc();
     }
 
     public void desc(){

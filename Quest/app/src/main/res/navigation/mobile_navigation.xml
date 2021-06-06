@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/nav_allQuests"
         android:name="slavin.fit.bstu.quest.ui.allQuests.allQuestsFragment"
-        android:label=""
+        android:label="Все квесты"
         tools:layout="@layout/fragment_allquests">
     </fragment>
 
